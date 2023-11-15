@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('tree1.jpg');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .background-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .background-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+
+        .glass-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+        }
+
+        .glass-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            color: #333;
+        }
+
+        .glass-container button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .glass-container button:hover {
+            background: #2980b9;
+        }
+
+        .glass-container a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 14px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .glass-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>Glass Morphism Login</title>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="glass-container">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <button type="submit">Login</button>
+            </form>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
